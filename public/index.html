@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Checker</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+  </head>
+  <body>
+    <div
+      id="start"
+      style="margin-top: 05px; padding: 10px"
+      >
+      <center>
+        <button class="game--start">Start Game</button>
+      </center>
+      
+      <!-- <center>
+        <button class="game--restart">Restart Game</button>
+      </center>
+    -->
+    
+  </div>
+  <img class="checkimg" src="checker.jpg" alt="checkerImage">  
+    <div class="">
+      <!-- buttons  -->
+      <main>
+        
+        <h1 id="playerName"></h1>
+        <!-- <div class="red-turn-text mobile">Blue turn</div> -->
+        <table class="table">
+          <tr>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="0"></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="1"></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="2"></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="3"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="red-piece" id="4"></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="5"></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="6"></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="7"></p>
+            </td>
+            <td class="noPieceHere"></td>
+          </tr>
+          <tr>
+            <td class="noPieceHere"></td>
+            <td>
+              <p
+                class="red-piece"
+                id="8"
+                onclick="$('#12').trigger('click')"
+              ></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="9"></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="10"></p>
+            </td>
+            <td class="noPieceHere"></td>
+            <td>
+              <p class="red-piece" id="11"></p>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="noPieceHere"></td>
+            <td></td>
+            <td class="noPieceHere"></td>
+            <td></td>
+            <td class="noPieceHere"></td>
+            <td></td>
+            <td class="noPieceHere"></td>
+          </tr>
+          <tr>
+            <td class="noPieceHere"></td>
+            <td></td>
+            <td class="noPieceHere"></td>
+            <td></td>
+            <td class="noPieceHere"></td>
+            <td></td>
+            <td class="noPieceHere"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="black-piece" id="12"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="13"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="14"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="15"></span></td>
+            <td class="noPieceHere"></td>
+          </tr>
+          <tr>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="16"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="17"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="18"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="19"></span></td>
+          </tr>
+          <tr>
+            <td><span class="black-piece" id="20"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="21"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="22"></span></td>
+            <td class="noPieceHere"></td>
+            <td><span class="black-piece" id="23"></span></td>
+            <td class="noPieceHere"></td>
+          </tr>
+        </table>
+        <div class="desktop">
+          <h2 class="game--status"></h2>
+          <h2 class="game--status2"></h2>
+          <div class="red-turn-text"></div>
+          <p id="divider"></p>
+          <div class="black-turn-text"></div>
+        </div>
+        <!-- <div class="black-turn-text mobile">Black turn</div> -->
+      </main>
+    
+ 
+    </div>
+  </body>
+  <!-- js file -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="emitHandler.js"></script>
+  <script src="script.js"></script>
+</html>
